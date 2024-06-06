@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <!-- /########### getting values inside an input object #########/ -->
+    
+        <input id="first" class="edit" type="text" placeholder=" enter first word " >
+        <br>
+        <input id="second" class="edit" type="text" placeholder="enter second word" >
+        <br>
+        <button onclick="addvalues()">click me</button>
+        <br>
+        <h2 id="op">Results =</h2>
+
+    <br> 
+    <!-- /################ checkbox use #############/ -->
+    <input id="rad1" type="radio" name="grou1" value="kenani">kenani</input>
+    <br>
+    <input id="rad2" type="radio" name="grou1" value="mphatso">mphatso</input>
+    <br>
+    <button onclick="fcn2()">click me</button>
+    <!-- ///////////////////////////////////////////////// -->
+    <br>
+    <select name="" id="">
+        <option value="">mphatso</option>
+        <option value="">kenani</option>
+        <option value="">chima</option>
+        <option value="">albert</option>
+    </select>
+    <hr width="80%" color="red">
+    
+    <input type="text" id="edit" placeholder="enter your name">
+    <br>
+    <button onclick="fmv()">submit</button>
+    <hr>
+    <div class="container">
+        <div class="row">
+        <div class="card">
+            <img src="image/image11.jpg" alt="kenani">
+            <div class="intro">
+                <h1>kenani</h1>
+                <P>mkenani is the one called the Malawi ~progate developer <span style="color: rgb(58, 32, 209);">software enginneer</span></P>
+            </div>
+        </div>
+            <div class="card">
+                <img src="image/image1.jpg" alt="kenani">
+                <div class="intro">
+                    <h1>kenani</h1>
+                    <P>mkenani is the one called the Malawi ~progate developer <span style="color: rgb(58, 32, 209);">software enginneer</span></P>
+                </div>
+            </div>
+                <div class="card">
+                    <img src="image/image7.jpg" alt="kenani">
+                    <div class="intro">
+                        <h1>kenani</h1>
+                        <P>mkenani is the one called the Malawi ~progate developer <span style="color: rgb(58, 32, 209);">software enginneer</span></P>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <hr width="80%" style="border:2px solid red;">
+    <!-- #####################☰####################################################################################################### -->
+    <h1>~progate malawi dev</h1>
+    <button onclick="start()">start</button>
+    <h2 id="ap"></h2>
+    <button onclick="stop()">stop</button>
+ 
+    <hr width="80%" style="border:2px solid red;">
+    <p>
+        <span class="letter">M</span>
+        <span class="letter">K</span>
+        <span class="letter">E</span>
+        <span class="letter">N</span>
+        <span class="letter">A</span>
+        <span class="letter">N</span>
+        <span class="letter">I</span>
+    </p>
+    <ol>
+        <li class="icon" id="rotate">
+            <a href="">&#9776; </a>
+        </li>
+    </ol>
+
+<br>
+<br>
+<hr width="80%" style="border:2px solid red;">
+<br>
+<br>
+<div class="contain">
+    <img src="image/image3.jpg" alt="vega" id="vg">
+    <div class="outline"></div>
+</div>
+</center>
+</body>
+<style>
+    .contain
+    {
+        position: relative;
+        display: inline-block;
+       
+    }
+    .outline
+    {
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        border: 2px solid green;
+        animation:rotateOutline 2s linear infinite;
+        animation-delay: 3s;
+        box-sizing: border-box;
+        border-radius:20px;
+        z-index:-1;
+        filter:blur(1px);
+    }
+    @keyframes rotateOutline
+    {
+        0%{
+            transform:  rotate(0deg);
+        }
+        100%{
+            transform:rotate(360deg);
+        }
+    }
+    #vg{
+        /* max-width: 100%; */
+        max-height:100%;
+        filter:blur(0.1px);
+        clip-path: inset(-20px);
+        z-index:1;
+    }
+    li
+    {
+        list-style:none;
+      
+    }
+    a{
+      text-decoration: none;  
+    }
+    .icon
+    {
+        transition: transform 1.8s;
+        width:25px;
+    }
+    .icon:hover
+    {
+        transform:rotate(360deg);
+    }
+    .icon:active
+    {
+        transition: transform 1s;
+    }
+
+    body{
+        
+        box-sizing: border-box;
+        margin:0;
+        line-height:auto;
+
+    
+    }
+    .card{
+        box-shadow: 5px 5px 20px rgb(119, 31, 31);
+        overflow: hidden;
+        background-color: rgb(136, 88, 26);
+       display: flex;
+       flex-wrap: wrap;
+       margin:10px;
+
+
+    
+    }
+    .card p{
+        color: aliceblue;
+        font-weight: bold;
+        color: rgb(226, 226, 248);
+        visibility: hidden; 
+         opacity:0; 
+    }
+    h1{ 
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: aliceblue;
+         background-color:red ;
+         border-radius:15px;
+        
+    }
+    .intro{
+        position: absolute;
+        height:70px;
+        width:350px;
+        box-sizing: border-box;
+        padding: 6px;
+        background-color: rgb(57, 30, 212);
+        bottom: auto;
+        border-radius:10px;
+        transition: .5s;
+       
+    }
+   @media screen and(max-width:680px)
+   {
+    .intro,.card{
+        width:100%;
+    }
+    img{
+        width: fit-content;
+        height:300px;
+    }
+    .card{
+       width:33.33%;
+       display: block;
+    }
+   }
+    .row
+    {
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
+
+        
+    }
+    .row::after{
+        display:table;
+        clear: both;
+        content: "";
+    }
+   
+    .card:hover .intro
+    {
+        height:220px;
+        background-color: #080808;
+    }
+    .card:hover p
+    {
+        opacity:1;
+        visibility: visible;
+        color: hsl(120, 29%, 97%);
+    }
+    .card:hover img{
+        transform: scale(1.1) rotate(2deg);
+    }
+    
+    .container{
+        display: flex;
+        width:100%;
+        margin:auto;
+       
+    }
+    img{
+        width: 350px;
+        image: resolution 10000px;;
+        height:500px;
+        border-radius: 15px;
+        
+    }
+    .card:hover{
+        cursor:pointer;
+    }
+    .letter{
+        display:inline-block;
+        position: relative;
+        margin:0px auto 20px auto;
+    }
+    .letter:nth-child(1)
+    {
+      animation: move  2s infinite;
+    }
+    .letter:nth-child(2)
+    {
+      animation: move  2s infinite;
+      animation-delay:0.2s;
+    }
+    .letter:nth-child(3)
+    {
+      animation: move  2s infinite;
+      animation-delay:0.4s;
+    }
+    .letter:nth-child(4)
+    {
+      animation: move  2s infinite;
+      animation-delay:0.6s;
+    }
+    .letter:nth-child(5)
+    {
+      animation: move  2s infinite;
+      animation-delay:0.8s;
+    }
+    .letter:nth-child(6)
+    {
+      animation: move  2s infinite;
+      animation-delay:1s;
+    }
+   .letter:nth-child(7)
+    {
+      animation: move  2s infinite;
+      animation-delay:1.2s;
+    }
+    @keyframes move {
+        0%{
+            transform: translateY(0px);
+        }
+        100%{
+            transform: translateY(25px);
+        }
+    }
+</style>
+<script>
+    //   ########### fnct for getting values inside an input object #########
+  function addvalues()
+  {
+    var b =document.getElementById("first").Value;
+    var a =document.getElementById("second").Value;
+    document.getElementById("op").innerHTML="Results= "+(a+b);
+  }
+
+function fcn2()
+{
+var rad1 = document.getElementById("rad1");
+var rad2 = document.getElementById("rad2");
+if (rad1.checked==true)
+{
+alert("you have selected: "+rad1.value);
+}
+else if (rad2.checked==true)
+{
+alert("you have selected: "+rad2.value);
+}
+else
+{
+alert("you have selected: nothing");
+}
+}
+function fmv()
+{
+    var element = document.getElementById("edit");
+    if(element.value.trim()=="")
+    {
+      
+       element.style.border="solid red 1px";
+       alert("blank user name");
+       
+    }
+}
+// ################################################################################################
+
+var ID=0;
+var second=0;
+function printMsg()
+{
+     document.getElementById("ap").innerHTML=second+" seconds";
+     second++;
+}
+function start()
+{
+    ID=window.setInterval(printMsg,1000);
+}
+function stop()
+{
+    window.clearInterval(ID);
+}
+</script>
+
+</html>
